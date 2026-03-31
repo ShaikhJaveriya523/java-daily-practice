@@ -1,0 +1,12 @@
+Write a programm to Print Hello World Using Java programming.
+
+package javaproject;
+
+public class JavaProject {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+
+OUTPUT:
+Hello World
