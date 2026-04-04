@@ -1,0 +1,16 @@
+Simple IF ELSE Example:
+public class Ifelse {
+    public static void main(String[] args) {
+        int a=0;
+        if(a==0){
+            System.out.println("HELLO");  
+        }
+        else{
+            System.out.println("WELCOME");
+      }
+    }
+    
+}
+
+OUTPUT:
+HELLO
