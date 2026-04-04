@@ -1,0 +1,13 @@
+Write A JAVA Program to Calculate Addition of Two nos:
+public class Addition {
+    public static void main(String[] args) {
+        int a=10;
+        int b=20;
+        int c=a+b;
+        System.out.println("Addition of two nos is" + c);
+    }
+  }
+
+OUTPUT:
+Addition of two nos is 30
+
