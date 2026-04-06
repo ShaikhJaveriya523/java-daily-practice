@@ -1,0 +1,19 @@
+Write a java program to check an employee is eligible ornot for bonus based on experience:
+package employeebonus;
+public class Employeebonus {
+    public static void main(String[] args) {
+        int exp=6;
+        if(exp>=5) {
+            System.out.println("The Employee is Eligible for bonus");
+        }
+        else {
+            System.out.println("The Employee is Not-Eligible for bonus");
+        }
+    }
+    
+}
+
+OUTPUT:
+The Employee is Eligible for bonus
+
+
