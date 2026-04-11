@@ -1,0 +1,28 @@
+Write a java program to check whether a bank account has a minimum balance or not:
+import java.util.Scanner;
+
+public class MinimumBalanceCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double balance;
+        double minimumBalance = 1000.0; // minimum required balance
+
+        System.out.print("Enter your account balance: ");
+        balance = scanner.nextDouble();
+
+        if (balance >= minimumBalance) {
+            System.out.println("Your account has the minimum required balance.");
+        } else {
+            System.out.println("Your account does not have the minimum balance.");
+            System.out.println("You need to deposit: " + (minimumBalance - balance));
+        }
+
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter your account balance: 800
+Your account does not have the minimum balance.
+You need to deposit: 200.0
