@@ -1,0 +1,24 @@
+Write a java program to check valid temperature :
+import java.util.Scanner;
+
+public class ValidTemperature {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double temperature;
+
+        System.out.print("Enter the temperature in Celsius: ");
+        temperature = scanner.nextDouble();
+
+        if (temperature >= -50 && temperature <= 50) {
+            System.out.println("The temperature is valid.");
+        } else {
+            System.out.println("The temperature is not valid.");
+        }
+
+        scanner.close();
+    }
+}
+OUTPUT:
+Enter the temperature in Celsius: 25
+The temperature is valid.
