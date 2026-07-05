@@ -1,0 +1,29 @@
+Q:WAP to check Greater of two nos:
+package greatest_of_twonos;
+
+import java.util.*;
+public class Greatest_of_twonos {
+
+    public static void main(String[] args) {
+        System.out.println("Enter first Value");
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        System.out.println("Enter second Value");
+        int b=sc.nextInt();
+        if(a>=b){
+            System.out.println("a greater than b");
+        }
+        else{
+           System.out.println("b greater than a");
+        }
+    }
+    
+}
+
+OUTPUT:
+Enter first Value
+5
+Enter second Value
+8
+b greater than a
+
