@@ -1,0 +1,28 @@
+WAP to check result Pass or Fail:
+
+package passfail;
+
+import java.util.*;
+
+public class PassFail {
+
+    public static void main(String[] args) {
+         System.out.println("Enter your Marks");
+        Scanner sc=new Scanner(System.in);
+        int Mark=sc.nextInt();
+       
+        if(Mark>=35){
+            System.out.println("result=pass");
+        }
+        else{
+            System.out.println("result=Fail");
+        }
+        
+    }
+    
+}
+
+OUTPUT:
+Enter your Marks
+45
+result=pass
