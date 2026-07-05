@@ -1,0 +1,23 @@
+Q. WAP to check number is greater less or equal to zero:
+package pos_neg_no;
+
+import java.util.*;
+public class Pos_neg_no {
+
+    public static void main(String[] args) {
+        System.out.println("Enter a number");
+       Scanner sc=new Scanner(System.in);
+       int num=sc.nextInt();
+        if(num>0) {
+            System.out.println(num + " greater than zero");
+        }
+        else if(num==0){
+            System.out.println(num + " number equal to zero");
+        }
+        else {
+            System.out.println(num+" is less than zero");
+        }
+      
+    }
+    
+}
