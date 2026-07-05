@@ -1,0 +1,38 @@
+Q.WAP to check greatest of 3 nos:
+package greatest_of_3nos;
+
+import java.util.*;
+
+public class Greatest_of_3nos {
+
+ 
+    public static void main(String[] args) {
+        System.out.println("Enter first number");
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        System.out.println("Enter Second number");
+        int b=sc.nextInt();
+        System.out.println("Enter thired number");
+        int c=sc.nextInt();
+        if(a>b && a>c){
+            System.out.println("a is greater than b and c");
+        }
+        if(b>a && b>c){
+            System.out.println("b is greater than a and c");
+        }
+        else{
+            System.out.println("c is greater than a and b");
+        }
+    }
+}
+
+OUTPUT:
+
+Enter first number
+4
+Enter Second number
+7
+Enter thired number
+3
+b is greater than a and c
+
