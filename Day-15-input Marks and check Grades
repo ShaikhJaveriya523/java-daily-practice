@@ -1,0 +1,51 @@
+Q:WAP to input Marks of subject calculate total Marks and Check Grade:
+package grademarks;
+
+import java.util.*;
+public class GradeMarks {
+
+    public static void main(String[] args) {
+       System.out.println("Enter Marks in physics");
+       Scanner sc=new Scanner(System.in);
+       int phy=sc.nextInt();
+        System.out.println("Enter Marks in chemistry");
+       
+       int chem=sc.nextInt();
+        System.out.println("Enter Marks in Maths");
+      
+       int math=sc.nextInt();
+        System.out.println("Enter Marks in Biology");
+      
+       int bio=sc.nextInt();
+        System.out.println("Enter Marks in English");
+      
+       int Eng=sc.nextInt();
+        System.out.println("Enter Marks in Computer Science");
+      
+       int CS=sc.nextInt();
+       int Marks= phy+chem+math+bio+Eng+CS;
+       System.out.println("your total Marks is="+Marks);
+       
+       if(Marks>90){
+           System.out.println("Greade A");
+        }
+       else if(Marks>75){
+           System.out.println("Grade B");
+       }
+       else if(Marks>60){
+           System.out.println("Grade C");
+       }
+       else if(Marks>45){
+           System.out.println("Good");
+       }
+       else if(Marks>35){
+           System.out.println("Pass");
+       }
+       else{
+           System.out.println("Fail");
+       }
+    }
+        
+    
+
+}
