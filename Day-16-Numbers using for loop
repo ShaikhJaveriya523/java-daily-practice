@@ -1,0 +1,26 @@
+Q: WAP to print numbers using for loops
+package nos_forloop;
+
+public class Nos_forloop {
+      public static void main(String[] args) {
+       
+        for(int No=1; No<=10; No++){
+            System.out.println(No);
+        }
+        
+    }
+    
+}
+
+OUTPUT:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
