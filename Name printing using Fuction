@@ -1,0 +1,30 @@
+Q: WAP to print your name using functions:
+package function;
+
+import java.util.*;
+public class Function {
+    //function declaration
+    public static void printMyName(String name){
+        System.out.println(name);
+        return;
+    }
+
+    
+    public static void main(String[] args) {     
+        //input name
+        System.out.println("Enter your name");
+        Scanner sc=new Scanner(System.in);
+        String name=sc.next();
+        
+        //Function call
+        printMyName(name);
+      
+    }
+}
+
+OUTPUT:
+
+Enter your name
+zoya
+zoya
+
