@@ -1,0 +1,35 @@
+Q: WAP to print addition of two nos using function:
+package addition_fuction;
+
+import java.util.*;
+public class Addition_fuction {
+    public static int CalculaSum(int a, int b){
+        int Sum=a+b;
+                
+        return Sum;
+    
+            
+}
+    
+    public static void main(String[] args) {
+        
+        System.out.println("Enter value of a");
+       
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+         System.out.println("Enter value of b");
+        int b=sc.nextInt();
+        
+      int Sum=CalculaSum( a,  b);
+       System.out.println(Sum);
+    }
+    
+}
+
+OUTPUT:
+
+Enter value of a
+10
+Enter value of b
+20
+The sum is 30
