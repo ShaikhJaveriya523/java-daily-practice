@@ -1,0 +1,34 @@
+Q: WAP to calculate multiplicaion of two nos using function:
+package multiplication_function;
+
+import java.util.*;
+
+public class Multiplication_function {
+    public static int CalculaMul(int a, int b){
+        int mul=a*b;
+                
+        return mul;
+    
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Enter value of a");
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        System.out.println("Enter value of b");
+        int b=sc.nextInt();
+        
+        int sub=CalculaMul(a,b);
+        System.out.println("Multiplication of two nos is "+ sub);
+        
+    }
+    
+    
+}
+
+OUTPUT:
+Enter value of a
+5
+Enter value of b
+5
+Multiplication of two nos is 25
