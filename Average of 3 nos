@@ -1,0 +1,32 @@
+Q: WAP to Enter 3 numbers from the user & make a function to print their average.
+package average_of_3_nos;
+
+ import java.util.*;
+public class Average_of_3_nos {
+
+    
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Entre value of a");
+        int a=sc.nextInt();
+        System.out.println("Entre value of b");
+        int b=sc.nextInt();
+        System.out.println("Entre value of c");
+        int c=sc.nextInt();
+        int average=(a+b+c)/3;
+        System.out.println("The average of 3 nos is= " +average);
+       
+    }
+    
+}
+
+OUTPUT:
+Entre value of a
+1
+Entre value of b
+2
+Entre value of c
+3
+The average of 3 nos is= 2
+
+
