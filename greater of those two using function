@@ -1,0 +1,36 @@
+Q: Write a function which takes in 2 numbers and returns the greater of those two.
+
+package greaterno;
+import java.util.*;
+public class Greaterno {
+    public static int GetGreaterNo(int a,int b){
+        if(a>b){
+           return a;
+        }
+        else{
+            return b;
+        }
+        
+    }
+
+    
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter value of a");
+        int a=sc.nextInt();
+        System.out.println("Enter value of b");
+        int b=sc.nextInt();
+       
+        System.out.println("The greatest among two no is=" + GetGreaterNo( a, b));
+        
+    }
+    
+}
+
+OUTPUT:
+Enter value of a
+6
+Enter value of b
+3
+The greatest among two no is=6
+
