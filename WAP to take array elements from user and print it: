@@ -1,0 +1,46 @@
+Q:WAP to take array elements from user and print it:
+package array_marks;
+
+import java.util.*;
+public class Array_marks {
+
+    
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter size of an array:");
+        int size=sc.nextInt();
+        int number[]=new int[size];
+        
+        for(int i=0;i<size;i++){
+            System.out.println("Enter array elements");
+            number[i]=sc.nextInt();
+            
+        }
+        for(int i=0;i<size;i++){
+            System.out.println("the given array element is=" + number[i]);
+        }
+        
+        
+    }
+    
+}
+
+OUTPUT:
+Enter size of an array:
+5
+Enter array elements
+1
+Enter array elements
+2
+Enter array elements
+3
+Enter array elements
+4
+Enter array elements
+5
+the given array element is=1
+the given array element is=2
+the given array element is=3
+the given array element is=4
+the given array element is=5
+
