@@ -1,0 +1,47 @@
+Q: WAP to Find the maximum & minimum number in an array of integers. 
+    
+package maxminarray;
+
+import java.util.*;
+
+public class MaxMinArray {
+
+  public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter size of Numbers:");
+       int size=sc.nextInt();
+       int numbers[]=new int[size];
+       
+       System.out.println("Enter numbers:");
+       for(int i=0;i<size;i++){
+            numbers[i]=sc.nextInt();
+       }
+       int max = Integer.MIN_VALUE;
+       int min = Integer.MAX_VALUE;
+       
+       for(int i=0;i<numbers.length;i++){
+           if(numbers[i]<min){
+               min=numbers[i];
+               
+           }
+           else{
+               max=numbers[i];
+           }
+       }
+       System.out.println("Largest number is : " + max);
+       System.out.println("Smallest number is : " + min);
+}
+    
+}
+
+OUTPUT:
+Enter size of Numbers:
+4
+Enter numbers:
+1
+2
+3
+4
+Largest number is : 4
+Smallest number is : 1
+
