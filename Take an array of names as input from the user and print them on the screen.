@@ -1,0 +1,39 @@
+Q:Take an array of names as input from the user and print them on the screen.
+
+package name_array;
+
+import java.util.*;
+public class Name_Array {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter size of Names:");
+        int size=sc.nextInt();
+        System.out.println("Enter Names:");
+        String name[]=new String[size];
+        
+        //input
+        for(int i=0;i<size;i++){
+            name[i]=sc.next();
+        }
+        
+        //Output
+        for(int i=0;i<name.length;i++){
+            System.out.println("name "+ (i+1) +"is :" + name[i]);
+        }
+       
+    }
+    
+}
+
+OUTPUT:
+Enter size of Names
+3
+Enter Names
+A
+B
+C
+name 1is :A
+name 2is :B
+name 3is :C
+
