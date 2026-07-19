@@ -1,0 +1,47 @@
+Q: WAP to Take an array of numbers as input and check if it is an array sorted in ascending order.
+
+package ascending_decending_noorders;
+
+import java.util.*;
+
+public class Ascending_Decending_noOrders {
+
+    
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter size of Array:");
+        int size=sc.nextInt();
+        int numbers[]=new int[size];
+        
+        //input
+        System.out.println("Enter array elements:");
+        for(int i=0;i<size;i++){
+            numbers[i]=sc.nextInt();
+        }
+        
+        boolean isAscending=true;
+        for(int i=0;i<numbers.length-1;i++){ // NOTICE numbers.length - 1 as termination condition
+            if(numbers[i]>numbers[i+1]){ // This is the condition for descending order
+                isAscending=false;
+            }
+        }
+        //loop checking for order
+        if(isAscending) {
+            System.out.println("The array is sorted in ascending order");
+       } else {
+           System.out.println("The array is not sorted in ascending order");
+       }
+    }
+    
+}
+
+OUTPUT:
+enter size of Array:
+4
+Enter array elements:
+5
+4
+3
+2
+The array is not sorted in ascending order
+
