@@ -1,0 +1,23 @@
+Q: WAP to Concatenation (Joining 2 strings)
+
+package string_initialization;
+
+
+public class String_initialization {
+
+    
+    public static void main(String[] args) {
+       String firstName = "Tony";
+       String secondName = "Stark";
+
+
+       String fullName = firstName + " " + secondName;
+       System.out.println(fullName);
+
+    
+
+    }
+}
+OUTPUT:
+Tony Stark
+
