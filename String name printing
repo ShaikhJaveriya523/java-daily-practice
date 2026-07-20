@@ -1,0 +1,20 @@
+Q: WAP to join first name and last name in string
+package string_initialization;
+
+
+public class String_initialization {
+
+    
+    public static void main(String[] args) {
+        String FirstName="Tony";
+        String secondName="Stark";
+        
+       
+        System.out.println("Full Name is = "+ FirstName+secondName);
+    }
+    
+}
+
+OUTPUT:
+
+Full Name is = TonyStark
