@@ -1,0 +1,19 @@
+Q:Array Initialization:
+package array_java;
+
+
+public class Array_java {
+
+    
+    public static void main(String[] args) {
+       int numbers[];
+       numbers=new int[5];
+       int values[]={1,2,3,4,5};
+       System.out.println("The element at location "+ values[2]);
+    
+    }
+}
+
+OUTPUT:
+The element at location 3
+
