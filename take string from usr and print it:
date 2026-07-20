@@ -1,0 +1,25 @@
+Q:WAP to take string from usr and print it:
+package string_initialization;
+
+import java.util.*;
+public class String_initialization {
+
+    
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Strings:");
+        String String = sc.next();
+
+        System.out.println("input string is String is:");
+        System.out.println(String);
+    }
+    
+}
+
+OUTPUT:
+Enter Strings:
+HelloJavaProgrammers
+
+input string is String is:
+HelloJavaProgrammers
+
