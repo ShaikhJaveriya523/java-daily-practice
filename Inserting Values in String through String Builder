@@ -1,0 +1,28 @@
+Q: WAP to insert character in String 
+package string_builder;
+
+import java.util.*;
+public class String_Builder {
+
+    
+    public static void main(String[] args) {
+        //Declaration
+        StringBuilder sb=new StringBuilder("Tony");
+        System.out.println(sb);
+       
+        //insert value sb.insert(index,value or character);
+       sb.insert(0, 's');
+       System.out.println(sb);
+       
+        sb.insert(2, 'n');
+       System.out.println(sb);
+        
+    }
+    
+}
+ 
+OUTPUT:
+Tony
+sTony
+sTnony
+
