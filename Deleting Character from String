@@ -1,0 +1,31 @@
+Q: WAP to delete a charater from String :
+package string_builder;
+
+import java.util.*;
+public class String_Builder {
+
+    
+    public static void main(String[] args) {
+        //Declaration
+        StringBuilder sb=new StringBuilder("Original String = Tony");
+        System.out.println(sb);
+       
+        //Delete value sb.delete(starting index , ending index);
+       sb.delete(0,1);
+       System.out.println("After deleting the T from Tony" + sb);
+       
+        sb.insert(2, 'n');
+        System.out.println(sb);
+       
+       //Delete the extra n in Tonny
+        sb.delete(2, 3);
+       System.out.println("After deleting the extra n from Tonny " + sb);
+        
+    }
+}
+
+OUTPUT:
+Original String = Tony
+After deleting the T from Tonyriginal String = ony
+ringinal String = Tony
+After deleting the extra n from Tonny riginal String = Tony
