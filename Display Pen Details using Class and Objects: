@@ -1,0 +1,41 @@
+Q: Write a program to Display Pen Details using Class and Objects:
+package classobject_pendetails;
+
+
+class Pen{
+    String color;
+    String type; //ballpen or gelpen    
+    
+    //Method for Pen Details
+    public void DisplayDetails() {
+    System.out.println("Color: " + color);
+    System.out.println("Type: " + type);
+}
+    //Method for Pen Function
+    public void Write(){
+        System.out.println("Pen Use for Writing Purpose.");
+    }
+    
+}
+//Main Class
+public class ClassObject_PenDetails {
+    public static void main(String[] args) {
+        //Object for Pen Class
+        Pen Pen1=new Pen();
+        Pen1.color="Blue";
+        Pen1.type="Ball-Pen"; 
+        
+        //Calling method on the object
+        Pen1.DisplayDetails();
+        
+        //Calling Method for Pen Function
+        Pen1.Write();
+    } 
+}
+
+OUTPUT:
+Color: Blue
+Type: Ball-Pen
+Pen Use for Writing Purpose:
+
+
