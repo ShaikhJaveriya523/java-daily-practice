@@ -1,0 +1,42 @@
+Definition
+A default constructor in Java is a constructor with no parameters.
+It is used to initialize objects with default values.
+If you do not explicitly define any constructor in your class, Java automatically provides a default constructor.
+
+Q: Simple example of a default constructor in Java
+package default_constructor;
+
+class Student{
+    String name;
+    int age;
+    
+    // Default constructor (no parameters)
+    public Student(){
+        // Assigning default values
+        name = "Unknown";
+        age = 0;
+        System.out.println("Default constructor called: Object created with default values.");
+    }
+
+ // Method to display student details
+    public void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+public class Default_Constructor {
+    public static void main(String[] args) {
+       // Creating an object using the default constructor
+       Student s1=new Student();
+       
+       //Displaying default Values
+       s1.display();
+              
+     
+    }
+}
+
+OUTPUT:
+Default constructor called: Object created with default values.
+Name: Unknown
+Age: 0
