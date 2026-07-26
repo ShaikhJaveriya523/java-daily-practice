@@ -1,0 +1,39 @@
+Q: Simple example of a Non-Parameterized Constructor
+Definition
+A Non-Parameterized Constructor in Java is a constructor without any parameters.
+It is used to initialize objects with default values when they are created.
+If no constructor is defined, Java automatically provides a default constructor.
+
+public class Car {
+
+    String brand;
+    int year;
+
+    // Non-Parameterized Constructor
+    public Car() {
+        // Initializing default values
+        brand = "Unknown";
+        year = 2000;
+        System.out.println("Non-Parameterized Constructor called");
+    }
+
+    // Method to display car details
+    public void displayInfo() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Year: " + year);
+    }
+
+    public static void main(String[] args) {
+        // Creating an object using the non-parameterized constructor
+        Car myCar = new Car();
+
+        // Displaying the initialized values
+        myCar.displayInfo();
+    }
+}
+
+OUTPUT:
+Non-Parameterized Constructor called
+Brand: Unknown
+Year: 2000
+
