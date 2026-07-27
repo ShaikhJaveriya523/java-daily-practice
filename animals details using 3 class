@@ -1,0 +1,61 @@
+Q: WAP to print animals details using 3 class 
+class Cat {
+    String color = "White";
+    int age = 2;
+
+    void display() {
+        System.out.println("Cat Details:");
+        System.out.println("Color: " + color);
+        System.out.println("Age: " + age);
+        System.out.println();
+    }
+}
+
+class Dog {
+    String breed = "Labrador";
+    int age = 4;
+
+    void display() {
+        System.out.println("Dog Details:");
+        System.out.println("Breed: " + breed);
+        System.out.println("Age: " + age);
+        System.out.println();
+    }
+}
+
+class Lion {
+    String habitat = "Forest";
+    int age = 6;
+
+    void display() {
+        System.out.println("Lion Details:");
+        System.out.println("Habitat: " + habitat);
+        System.out.println("Age: " + age);
+        System.out.println();
+    }
+}
+
+public class AnimalDemo {
+    public static void main(String[] args) {
+        Cat c = new Cat();
+        Dog d = new Dog();
+        Lion l = new Lion();
+
+        c.display();
+        d.display();
+        l.display();
+    }
+}
+
+OUTPUT:
+Cat Details:
+Color: White
+Age: 2
+
+Dog Details:
+Breed: Labrador
+Age: 4
+
+Lion Details:
+Habitat: Forest
+Age: 6
