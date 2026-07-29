@@ -1,0 +1,81 @@
+Q: Write a Java program demonstrating polymorphism using method overloading (compile-time polymorphism).
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+/**
+ * Demonstrates Method Overloading in Java (Compile-time Polymorphism)
+ */
+class Calculator {
+
+    // Overloaded method: sum of two integers
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    // Overloaded method: sum of three integers
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Overloaded method: sum of two doubles
+    public double add(double a, double b) {
+        return a + b;
+    }
+
+    // Overloaded method: concatenate two strings
+    public String add(String a, String b) {
+        return a + b;
+    }
+}
+
+public class MethodOverloadingDemo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Calculator calc = new Calculator();
+
+        try {
+            // Integer addition
+            System.out.print("Enter two integers: ");
+            int int1 = scanner.nextInt();
+            int int2 = scanner.nextInt();
+            System.out.println("Sum of two integers: " + calc.add(int1, int2));
+
+            // Integer addition (three numbers)
+            System.out.print("Enter three integers: ");
+            int int3 = scanner.nextInt();
+            int int4 = scanner.nextInt();
+            int int5 = scanner.nextInt();
+            System.out.println("Sum of three integers: " + calc.add(int3, int4, int5));
+
+            // Double addition
+            System.out.print("Enter two decimal numbers: ");
+            double double1 = scanner.nextDouble();
+            double double2 = scanner.nextDouble();
+            System.out.println("Sum of two doubles: " + calc.add(double1, double2));
+
+            // String concatenation
+            scanner.nextLine(); // consume leftover newline
+            System.out.print("Enter first string: ");
+            String str1 = scanner.nextLine();
+            System.out.print("Enter second string: ");
+            String str2 = scanner.nextLine();
+            System.out.println("Concatenated string: " + calc.add(str1, str2));
+
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input. Please enter the correct data type.");
+        } finally {
+            scanner.close();
+        }
+    }
+}
+
+OUTPUT:
+Enter two integers: 5 10
+Sum of two integers: 15
+Enter three integers: 1 2 3
+Sum of three integers: 6
+Enter two decimal numbers: 2.5 3.7
+Sum of two doubles: 6.2
+Enter first string: Hello
+Enter second string: World
+Concatenated string: HelloWorld
