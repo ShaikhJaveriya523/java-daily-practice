@@ -1,0 +1,54 @@
+Q: WAP to Print Base class Animal and diffferent class for different Animals:
+// PolymorphismDemo.java
+// Demonstrates basic polymorphism in Java
+
+// Base class
+class Animal {
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+// Subclass 1
+class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+
+// Subclass 2
+class Cat extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class PolymorphismDemo {
+    public static void main(String[] args) {
+        // Polymorphic references
+        Animal myAnimal; // Reference of type Animal
+
+        // Pointing to Dog object
+        myAnimal = new Dog();
+        myAnimal.makeSound(); // Calls Dog's version
+
+        // Pointing to Cat object
+        myAnimal = new Cat();
+        myAnimal.makeSound(); // Calls Cat's version
+
+        // Array of Animals (polymorphic collection)
+        Animal[] animals = { new Dog(), new Cat(), new Animal() };
+        for (Animal a : animals) {
+            a.makeSound(); // Calls the overridden method based on actual object
+        }
+    }
+}
+
+OUTPUT:
+Dog barks
+Cat meows
+Dog barks
+Cat meows
+Animal makes a sound
