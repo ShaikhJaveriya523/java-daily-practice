@@ -1,0 +1,44 @@
+Q: Runtime Polymorphism (Method Overriding)
+Occurs when a subclass provides a specific implementation of a method that is already defined in its superclass.
+The method to call is determined at runtime based on the actual object type.
+
+Real-world analogy:
+
+Think of a Bird class. All birds can makeSound(). But a Sparrow chirps and a Parrot talks. The same method name produces different behaviors depending on the bird.
+
+// Superclass
+class Bird {
+    void makeSound() {
+        System.out.println("Some generic bird sound");
+    }
+}
+
+// Subclass 1
+class Sparrow extends Bird {
+    @Override
+    void makeSound() {
+        System.out.println("Chirp chirp");
+    }
+}
+
+// Subclass 2
+class Parrot extends Bird {
+    @Override
+    void makeSound() {
+        System.out.println("Squawk! Hello!");
+    }
+}
+
+public class TestPolymorphism {
+    public static void main(String[] args) {
+        Bird myBird1 = new Sparrow();
+        Bird myBird2 = new Parrot();
+
+        myBird1.makeSound();   // Output: Chirp chirp
+        myBird2.makeSound();   // Output: Squawk! Hello!
+    }
+}
+
+OUTPUT:
+Chirp chirp
+Squawk! Hello!
