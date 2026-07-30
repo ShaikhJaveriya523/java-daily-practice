@@ -1,0 +1,39 @@
+Q: Program to implement Single Inheritance:
+Single inheritance is an object-oriented programming concept where a class (child or subclass) inherits properties and methods from only one parent class (superclass), 
+establishing a clear hierarchical relationship.
+
+package polymorphism_shapes;
+
+import polymorphism_shapes.Shapes.Triangle;
+
+class Shapes {
+    public void Area(){
+        System.out.println("Display Area");
+    }
+
+class Triangle extends Shapes {
+    public void Area(int l,int h){
+        System.out.println((1.0/2)*l*h);
+    }
+}
+}
+
+public class Polymorphism_Shapes {
+
+    public static void main(String[] args) {
+       Shapes t1=new Shapes();
+       t1.Area();
+       
+       
+       Shapes.Triangle t2 = t1.new Triangle();
+       System.out.println("Area of Triangle is:");
+       t2.Area(10, 20);
+    }
+    
+}
+
+OUTPUT:
+Display Area
+Area of Triangle is:
+100.0
+
