@@ -1,0 +1,62 @@
+Implimenting Hierarchical  Inheritance:
+Hierarchical inheritance is a type of inheritance in object-oriented programming where multiple classes inherit from a single base class. 
+package polymorphism_shapes;
+
+import polymorphism_shapes.Shapes.Triangle;
+
+class Shapes {
+    public void Area(){
+        System.out.println("Display Area");
+    }
+
+class Triangle extends Shapes {
+    public void Area(int l,int h){
+        System.out.println((1.0/2)*l*h);
+    }
+}
+class Equilateral extends Shapes {
+    public void Area(int l,int h){
+        System.out.println((1.0/2)*l*h);
+    }
+
+}
+class Circle extends Shapes {
+     public void Area(int r){
+        System.out.println((3.14)*r*r);
+    }
+}
+}
+
+public class Polymorphism_Shapes {
+
+    public static void main(String[] args) {
+       //Object for Triangle class
+       Shapes t1=new Shapes();
+       t1.Area();
+       
+       //Object for Triangle class
+       Shapes.Triangle t2 = t1.new Triangle();
+       System.out.println("Area of Triangle is:");
+       t2.Area(10, 20);
+       
+        //Object for Equilatral class
+       Shapes.Equilateral t3 = t1.new Equilateral();
+       System.out.println("Area of Equilateral is:");
+       t3.Area(50, 70);
+       
+       //Object for Circle class
+       Shapes.Circle c1 = t1.new Circle();
+       System.out.println("Area of Circle is:");
+       c1.Area(20);
+    }
+    
+}
+
+OUTPUT:
+Display Area
+Area of Triangle is:
+100.0
+Area of Equilateral is:
+1750.0
+Area of Circle is:
+1256.0
