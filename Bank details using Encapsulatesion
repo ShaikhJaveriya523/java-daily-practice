@@ -1,0 +1,65 @@
+WAP to print Bank details using Encapsulatesion.
+// File: BankAccount.java
+class BankAccount {
+    // 1. Private variables hide the data from direct external access
+    private String accountHolder;
+    private double balance;
+
+    // Constructor to initialize data
+    public BankAccount(String accountHolder, double initialBalance) {
+        this.accountHolder = accountHolder;
+        if (initialBalance >= 0) {
+            this.balance = initialBalance;
+        } else {
+            this.balance = 0; // Fallback value
+        }
+    }
+
+    // 2. Public Getter for accountHolder
+    public String getAccountHolder() {
+        return accountHolder;
+    }
+
+    // 3. Public Setter for accountHolder
+    public void setAccountHolder(String accountHolder) {
+        if (accountHolder != null && !accountHolder.trim().isEmpty()) {
+            this.accountHolder = accountHolder;
+        }
+    }
+
+    // 4. Public Getter for balance (Read-only access)
+    public double getBalance() {
+        return balance;
+    }
+
+    // 5. Business logic methods instead of direct field updates
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Successfully deposited: $" + amount);
+        } else {
+            System.out.println("Invalid deposit amount!");
+        }
+    }
+}
+
+// File: Main.java
+public class Main {
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount("Alice", 500.00);
+
+        // Try to access private variables directly (Will cause compilation errors)
+        // account.balance = -1000; // ERROR: balance has private access
+
+        // Read and modify data securely via public methods
+        System.out.println("Account Holder: " + account.getAccountHolder());
+        System.out.println("Initial Balance: $" + account.getBalance());
+
+        // Perform structured mutations
+        account.deposit(250.00);
+        System.out.println("Updated Balance: $" + account.getBalance());
+        
+        // Attempting an invalid action via business logic
+        account.deposit(-50.00); 
+    }
+}
