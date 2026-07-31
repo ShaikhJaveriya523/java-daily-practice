@@ -1,0 +1,33 @@
+Q: Initializing Abstract Keyword:
+package Abstraction_example;
+abstract class Animal {
+    abstract void walk();
+    public void eat() {
+        System.out.println("Animals Eats");
+    }
+}
+class Horse extends Animal {
+    public void walk() {
+        System.out.println("Walks on 4 legs");
+    }
+} 
+class Chiken extends Animal {
+    public void walk() {
+        System.out.print("Walks on 2 legs0");
+    }
+}
+
+public class Abstraction_Example {
+
+   
+    public static void main(String[] args) {
+        Horse horse=new Horse();
+        horse.walk();
+        horse.eat();
+    }
+}
+
+OUTPUT:
+Walks on 4 legs
+Animals Eats
+
