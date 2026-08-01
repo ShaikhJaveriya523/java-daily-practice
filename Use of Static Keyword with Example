@@ -1,0 +1,38 @@
+Q: Use of Static Keyword with Example:
+In Java, the static keyword is used to define members (variables, methods, blocks, and nested classes) that belong to the class itself rather than to any specific object. 
+This means they are shared across all instances and memory is allocated only once when the class is loaded.
+
+Key points:
+Access static members using the class name without creating an object.
+Static members cannot directly access non-static members.
+Static methods cannot use this or super.
+
+Example:
+package statickeyword_example;
+class Student {
+    String name;
+    static String School;
+
+}
+
+
+public class StaticKeyword_Example {
+
+    
+    public static void main(String[] args) {
+        Student.School="ABC";
+        Student Student1=new Student();
+        Student1.name="Tony";
+        System.out.println(Student1.School);
+        
+        Student Student2=new Student();
+        Student2.name="Rahul";
+        System.out.println(Student2.School);
+    }
+    
+}
+
+OUTPUT:
+ABC
+ABC
+
