@@ -1,0 +1,24 @@
+Q: WAP to Print area of Rectangle using object.]
+Create a class Rectangle:
+length, width
+Method to calculate area
+
+package rectanglecalculation;
+
+class Rectangle {
+    public void Area(int l,int b) {
+        System.out.println("The Area of Rectangle is=" + l*b);
+    }
+}
+public class RectangleCalculation {
+
+    
+    public static void main(String[] args) {
+        Rectangle R1=new Rectangle();
+        R1.Area(4, 8);
+    }
+    
+}
+
+OUTPUT:
+The Area of Rectangle is=32
