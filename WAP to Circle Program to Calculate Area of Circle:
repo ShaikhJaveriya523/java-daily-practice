@@ -1,0 +1,26 @@
+Q: WAP to Circle Program to Calculate Area of Circle:
+Take value and display result.
+
+package circlearea;
+
+class Circle{
+    int radius;
+    public void setValues(int r) { 
+        radius=r;
+    }
+    public void Area() {
+        System.out.println("Area of Circle is=" + (3.14)*radius*radius);
+    }
+}
+public class CircleArea {
+    public static void main(String[] args) {
+        Circle R1=new Circle();
+        R1.setValues(66);
+        R1.Area();
+    }
+    
+}
+
+OUTPUT:
+Area of Circle is=13677.84
+
