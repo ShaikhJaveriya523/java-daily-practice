@@ -1,0 +1,31 @@
+Q: WAP to print Employee Details using Class And Object:
+package employeedetails;
+
+class Employee {
+    int Salary;
+    String name;
+    String companyName;
+     
+Employee(String name, int salary, String companyNAme){
+    this.name=name;
+    this.Salary=salary;
+    this.companyName = companyName;
+}
+    public void dispalyInfo() {
+        System.out.println("Employee Name =" + name);
+        System.out.println("Employee Salary =" + Salary);
+        System.out.println("Employee Company name =" + companyName );
+}
+}
+public class EmployeeDetails {
+    public static void main(String[] args) {
+      Employee E1=new Employee("Emma", 500000, "XYZ Company");
+      E1.dispalyInfo();
+    }
+    
+}
+
+OUTPUT:
+Employee Name =Emma
+Employee Salary =500000
+Employee Company name =XYZ Company
