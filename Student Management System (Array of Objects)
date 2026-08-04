@@ -1,0 +1,38 @@
+Q: WAP to print Student Management System (Array of Objects)
+class Student {
+    int id;
+    String name;
+    double marks;
+
+    public Student(int id, String name, double marks) {
+        this.id = id;
+        this.name = name;
+        this.marks = marks;
+    }
+
+    public void display() {
+        System.out.println(id + " " + name + " " + marks);
+    }
+}
+
+public class StudentSystem {
+    public static void main(String[] args) {
+
+        Student[] students = new Student[3];
+
+        students[0] = new Student(1, "Aisha", 85);
+        students[1] = new Student(2, "Ali", 78);
+        students[2] = new Student(3, "Sara", 92);
+
+        System.out.println("Student Details:");
+        for (Student s : students) {
+            s.display();
+        }
+    }
+}
+
+OUTPUT:
+Student Details:
+1 Aisha 85.0
+2 Ali 78.0
+3 Sara 92.0
