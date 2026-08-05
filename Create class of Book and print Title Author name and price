@@ -1,0 +1,31 @@
+Q: Create class of Book and print Title Author name and price
+package book_details;
+
+class Book {
+    String title;
+    String authorName;
+    double price;
+    
+    public void displayBookInfo() {
+        System.out.println("The title of book is: " + title);
+        System.out.println("The author of book is: " + authorName);
+        System.out.println("The price of book is: " + price);
+    }
+}
+
+public class Book_Details {
+    public static void main(String[] args) {
+        Book book1 = new Book();
+        book1.authorName = "R.S. Aggarwal";
+        book1.title = "Aptitude & Reasoning";
+        book1.price = 500.789;
+       
+        book1.displayBookInfo();
+    }
+}
+
+OUTPUT:
+The Title of Book is: Aptitude & Resoning
+The author of Book is: RS Aggarwal
+the price of Book is: 500.789
+
