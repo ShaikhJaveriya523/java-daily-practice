@@ -1,0 +1,77 @@
+Q: WAP to print Bank Account Details using Constructor and user input:
+package bankdetails;
+
+//user input
+import java.util.*;
+
+//bank Class
+class BankAccount {
+    String accountHolderName;
+    long accountNumber;
+    double balance;
+
+//Constructor 
+    BankAccount(String Name, long AccNo, double bal) {
+        accountHolderName = Name;
+        accountNumber = AccNo;
+        balance = bal;
+    }
+
+//Method for Deposit
+    public void Deposit(double amount) {
+        balance += amount;
+        System.out.println("Deposited : " + amount);
+    }
+
+//Method for Withdraw
+    public void Withdraw(double amount) {
+        if(amount <= balance) {
+            balance  -= amount; 
+            System.out.println("Withdraw : " + amount );
+        }
+        else {
+            System.out.println("Insufficient Balance:");
+        }
+    }
+
+//Method for Display
+    public void displayDetails() {
+        System.out.println("Account Name : " + accountHolderName);
+        System.out.println("Account Number : " + accountNumber);
+        System.out.println("Account Balance : " + balance);
+    }
+}
+
+//Main Class
+public class BankDetails {
+    public static void main(String[] args) {
+
+//Taking Values from user
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Name:");
+        String Name=sc.nextLine();
+        System.out.println("Enter Account Number:");
+        long AccNo=sc.nextInt();
+        System.out.println("Enter Balance:");
+        double bal=sc.nextDouble();
+        
+// Creating object using constructor
+        BankAccount acc1=new BankAccount(Name, AccNo, bal);
+        
+        acc1.Deposit(1000);
+        acc1.Withdraw(500);
+           
+    }
+    
+}
+
+OUTPUT:
+Enter Name:
+Javeriya
+Enter Account Number:
+123456789
+Enter Balance:
+100000.00
+Deposited : 1000.0
+Withdraw : 500.0
+
