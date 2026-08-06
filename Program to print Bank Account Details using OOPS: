@@ -1,0 +1,53 @@
+Q: WAP to print Bank Account Details using OOPS:
+
+package bankdetails;
+
+class BankAccount {
+    String accountHolderName;
+    long accountNumber;
+    double balance;
+    
+    public void Deposit(double amount) {
+        balance = balance + amount;
+        System.out.println("Deposited : " + amount);
+    }
+    
+    public void Withdraw(double amount) {
+        if(amount <= balance) {
+            balance = balance - amount; 
+            System.out.println("Withdraw : " + amount );
+        }
+        else {
+            System.out.println("Insufficient Balance:");
+        }
+    }
+    
+    public void displayDetails() {
+        System.out.println("Account Name : " + accountHolderName);
+        System.out.println("Account Number : " + accountNumber);
+        System.out.println("Account Balance : " + balance);
+    }
+}
+public class BankDetails {
+
+   
+    public static void main(String[] args) {
+        BankAccount acc1=new BankAccount();
+        acc1.accountHolderName="Javeriya";
+        acc1.accountNumber=123456789;
+        acc1.balance=1000.00;
+        
+        acc1.Deposit(1000);
+        acc1.Withdraw(500);
+        acc1.displayDetails();
+       
+    }
+    
+}
+
+OUTPUT:
+Deposited : 1000.0
+Withdraw : 500.0
+Account Name : Javeriya
+Account Number : 123456789
+Account Balance : 1500.0
