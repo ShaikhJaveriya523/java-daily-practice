@@ -1,0 +1,62 @@
+Q: WAP to print Student Details using OOPS:
+package studentinfo;
+
+import java.util.*;
+class Student {
+    String name;
+    int rollNumber;
+    double marks;
+    
+
+    Student(String Name, int RollNo, double Marks ) {
+       this.name= Name;
+       this.rollNumber= RollNo;
+       this.marks= Marks;
+    }
+    
+    public void DisplayResult() {
+        System.out.println("Student Name: " + name);
+        System.out.println("Student Roll Number: " + rollNumber);
+        System.out.println("Student Marks: " + marks);
+    }
+    
+    public void CheckResult() {
+        if(marks>=40) {
+            System.out.println("Result = Pass");
+        }
+        else {
+            System.out.println("Result = Fail");
+        }
+    }
+}
+public class StudentInfo {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Name:");
+        String name= sc.nextLine();
+        System.out.println("Enter Roll Number:");
+        int rollNo=sc.nextInt();
+        System.out.println("Enter Marks:");
+        double marks=sc.nextDouble();
+        
+        Student s1=new Student(name, rollNo, marks);
+        s1.DisplayResult();
+        s1.CheckResult();
+        
+    }
+    
+}
+
+OUTPUT:
+Enter Name:
+Javeriya Shaikh
+Enter Roll Number:
+63
+Enter Marks:
+99
+Student Name: Javeriya Shaikh
+Student Roll Number: 63
+Student Marks: 99.0
+Result = Pass
+
