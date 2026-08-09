@@ -1,0 +1,43 @@
+Q: Ask for a number from the user for which he wants to print a table for. The message should be “Please enter the number for which you want to print the table” . 
+Store that number in a variable n, create a method printTheTable, for calculating and printing the table for n. Use Scanner method for accepting the input frm the user.
+
+
+package numbertable;
+
+import java.util.*;
+
+public class NumberTable {
+    int n;
+    
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Please enter the number which you want to print the table:");
+        int n=sc.nextInt();   
+        PrintTable(n);
+      
+    }   
+    public static void PrintTable(int n) {
+            int table;
+            for(int i=1; i<=10; i++) {
+                table= n*i;
+                System.out.println(n + "*" + i + "=" + table);
+            }
+        }
+
+}   
+
+OUTPUT:
+Please enter the number which you want to print the table:
+5
+5*1=5
+5*2=10
+5*3=15
+5*4=20
+5*5=25
+5*6=30
+5*7=35
+5*8=40
+5*9=45
+5*10=50
+
+
