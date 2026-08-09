@@ -1,0 +1,90 @@
+Q: Multiple Students Details (Array of Objects)
+package studentinformation;
+import java.util.*;
+
+class Student {
+    String name;
+    int rollNo;
+    double marks;
+    
+    public void DisplayDetails() {
+        System.out.println("Student Name: " + name);
+        System.out.println("Student Roll Number: " + rollNo);
+        System.out.println("Student Marks: " + marks);
+        System.out.println();
+    }
+}
+public class StudentInformation {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        
+        System.out.println("Enter how many Students:");
+        int n=sc.nextInt();
+                 
+        Student[] Student=new Student[n]; //Array
+        
+        for(int i=0;i<n; i++) {
+            sc.nextLine(); //buffer clear
+            System.out.println("Enter details of student " + (i+1));
+            System.out.println("Enter Name:");
+            String name = sc.nextLine();
+
+            System.out.println("Enter roll number:");
+            int rollNo = sc.nextInt();
+
+            System.out.println("Enter marks:");
+            double marks = sc.nextDouble();
+            
+            //Creating Object of Class
+            Student[i]=new Student();
+            Student[i].name = name;
+            Student[i].rollNo = rollNo;
+            Student[i].marks = marks;
+            
+        }
+        System.out.println("\n-----Student Details -----");
+            for(int i = 0; i < n; i++) {
+                Student[i].DisplayDetails();
+            }
+    }
+}
+
+OUTPUT:
+Enter how many Students:
+3
+Enter details of student 1
+Enter Name:
+Javeriya
+Enter roll number:
+63
+Enter marks:
+88
+Enter details of student 2
+Enter Name:
+Kanchan
+Enter roll number:
+50
+Enter marks:
+99
+Enter details of student 3
+Enter Name:
+zoya
+Enter roll number:
+63
+Enter marks:
+98
+
+-----Student Details -----
+Student Name: Javeriya
+Student Roll Number: 63
+Student Marks: 88.0
+
+Student Name: Kanchan
+Student Roll Number: 50
+Student Marks: 99.0
+
+Student Name: zoya
+Student Roll Number: 63
+Student Marks: 98.0
+
+
