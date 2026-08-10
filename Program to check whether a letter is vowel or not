@@ -1,0 +1,39 @@
+Q: WAP to program to take a letter or alphabet from user and check whether it is vowel or not:
+
+package lettercheckvowel;
+
+import java.util.*;
+public class LetterCheckVowel {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter letter:");
+        char isLetter=sc.next().charAt(0);
+        switch(isLetter) {
+            case 'A' :
+                System.out.println("the letter is vowel");
+                break;
+            case 'E':
+                System.out.println("the letter is vowel");
+                break;
+            case 'I':
+                System.out.println("the letter is vowel");
+                break;
+            case 'O':
+                System.out.println("the letter is vowel");
+                break;
+            case 'U':
+                System.out.println("the letter is vowel");
+                break;
+            default:
+                System.out.println("the letter is not a vowel");
+                break;
+        }
+    }
+    
+}
+
+OUTPUT:
+Enter letter:
+A
+the letter is vowel
+
