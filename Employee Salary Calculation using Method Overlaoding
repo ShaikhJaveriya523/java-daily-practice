@@ -1,0 +1,70 @@
+Q: WAP to print Employee Salary Calculations using OOPS(Method Overloading):
+
+package employeesalary;
+
+import java.util.*;
+
+class Employee {
+   public int calculateSalary(int basicSalary) {
+       return basicSalary;
+   }
+   public int calculateSalary(int basicSalary , int bonus) {
+       return basicSalary + bonus;
+
+   }
+   public double calculateSalary(double basicSalary , double bonus, double allowance) {
+       return  basicSalary + bonus + allowance;
+   }
+    
+} 
+
+public class EmployeeSalary {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Basic Salary:");
+        int basicSalary=sc.nextInt();
+        
+        System.out.println("Enter Bonus:");
+        int bonus=sc.nextInt();
+        
+        System.out.println("Enter basic Salary for 3rd Calculation:");
+        double bsicSalary2=sc.nextDouble();
+        
+        System.out.println("Enter Bonus for 3rd Calculation:");
+        double bonus2=sc.nextDouble();
+        
+        System.out.println("Enter  allowance:");
+        double allowance=sc.nextDouble();
+        
+        Employee e1=new Employee();
+        int Salary1=e1.calculateSalary(basicSalary);
+        int Salary2=e1.calculateSalary(basicSalary, bonus);
+        double Salary3=e1.calculateSalary(basicSalary, bonus, allowance);
+        System.out.println("\n--- Salary Details ---");
+        System.out.println("Salary: " + Salary1);
+        System.out.println("Salary with Bonus: " + Salary2);
+        System.out.println("Salary with Bonus and Allowance: " + Salary3);
+
+        sc.close();
+    }
+    
+}
+
+OUTPUT:
+Enter Basic Salary:
+2000
+Enter Bonus:
+500
+Enter basic Salary for 3rd Calculation:
+20.000
+Enter Bonus for 3rd Calculation:
+550.00
+Enter  allowance:
+50.00
+
+--- Salary Details ---
+Salary: 2000
+Salary with Bonus: 2500
+Salary with Bonus and Allowance: 600.0
+
+
