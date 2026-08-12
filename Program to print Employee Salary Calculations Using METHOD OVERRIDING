@@ -1,0 +1,87 @@
+Q: WAP to print Employee Salary Calculations Using METHOD OVERRIDING:
+package employeesalary.overriding;
+
+import java.util.Scanner;
+
+class Employee {
+
+    public void calculateSalary() {
+        System.out.println("Employee salary calculation");
+    }
+}
+
+class FullTimeEmployee extends Employee {
+
+    int basicSalary;
+    int bonus;
+
+    FullTimeEmployee(int basicSalary, int bonus) {
+        this.basicSalary = basicSalary;
+        this.bonus = bonus;
+    }
+
+    @Override
+    public void calculateSalary() {
+        int salary = basicSalary + bonus;
+        System.out.println("Full-Time Employee Salary: " + salary);
+    }
+}
+
+class PartTimeEmployee extends Employee {
+
+    int hoursWorked;
+    int hourlyRate;
+
+    PartTimeEmployee(int hoursWorked, int hourlyRate) {
+        this.hoursWorked = hoursWorked;
+        this.hourlyRate = hourlyRate;
+    }
+
+    @Override
+    public void calculateSalary() {
+        int salary = hoursWorked * hourlyRate;
+        System.out.println("Part-Time Employee Salary: " + salary);
+    }
+}
+
+public class EmployeeSalaryOverriding {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Full-Time Basic Salary: ");
+        int basicSalary = sc.nextInt();
+
+        System.out.print("Enter Bonus: ");
+        int bonus = sc.nextInt();
+
+        System.out.print("Enter Hours Worked: ");
+        int hoursWorked = sc.nextInt();
+
+        System.out.print("Enter Hourly Rate: ");
+        int hourlyRate = sc.nextInt();
+
+        // Runtime Polymorphism
+        Employee e1 = new FullTimeEmployee(basicSalary, bonus);
+        Employee e2 = new PartTimeEmployee(hoursWorked, hourlyRate);
+
+        System.out.println("\n--- Salary Details ---");
+
+        e1.calculateSalary();
+        e2.calculateSalary();
+
+        sc.close();
+    }
+}
+
+OUTPUT:
+Enter Full-Time Basic Salary: 3000
+Enter Bonus: 500
+Enter Hours Worked: 5
+Enter Hourly Rate: 80
+
+--- Salary Details ---
+Full-Time Employee Salary: 3500
+Part-Time Employee Salary: 400
+
