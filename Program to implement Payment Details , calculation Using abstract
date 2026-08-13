@@ -1,0 +1,87 @@
+Q: WAP to Calculate and Print Payment details Using abstract:
+package paymentdetails;
+
+import java.util.Scanner;
+
+// Abstract class
+abstract class Payment {
+
+    double amount;
+
+    // Constructor
+    Payment(double amount) {
+        this.amount = amount;
+    }
+
+    // Abstract method
+    abstract void makePayment();
+
+    // Normal method
+    void displayAmount() {
+        System.out.println("Amount: ₹" + amount);
+    }
+}
+
+// Child class 1
+class CreditCardPayment extends Payment {
+
+    CreditCardPayment(double amount) {
+        super(amount);
+    }
+
+    @Override
+    void makePayment() {
+        System.out.println("Payment was made using Credit Card");
+    }
+}
+
+// Child class 2
+class UPIPayment extends Payment {
+
+    UPIPayment(double amount) {
+        super(amount);
+    }
+
+    @Override
+    void makePayment() {
+        System.out.println("Payment was made using UPI");
+    }
+}
+
+// Main class
+public class PaymentDetails {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter payment amount: ");
+        double amount = sc.nextDouble();
+
+        // Runtime polymorphism
+        Payment p1 = new CreditCardPayment(amount);
+        Payment p2 = new UPIPayment(amount);
+
+        System.out.println("\n--- Credit Card Payment ---");
+        p1.displayAmount();
+        p1.makePayment();
+
+        System.out.println("\n--- UPI Payment ---");
+        p2.displayAmount();
+        p2.makePayment();
+
+        sc.close();
+    }
+}
+
+OUTPUT:
+Enter payment amount: 30000
+
+--- Credit Card Payment ---
+Amount: ?30000.0
+Payment was made using Credit Card
+
+--- UPI Payment ---
+Amount: ?30000.0
+Payment was made using UPI
+
