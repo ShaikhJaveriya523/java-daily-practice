@@ -1,0 +1,43 @@
+Q: WAP to Convert Array to String:
+package arraytostring;
+
+import java.util.*;
+
+public class ArrayToString {
+    public static void main(String[] args) {
+        //User Input Array
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter size of an array:");
+        int size=sc.nextInt();
+        int number[]=new int[size];
+        
+        //Input for Array Elements
+        for(int i=0;i<size;i++) {
+            System.out.println("Enter Array Elements:");
+            number[i]=sc.nextInt();   
+        }
+        
+        //Conversion of Array to String
+        String result = Arrays.toString(number);
+        System.out.println(result);
+        
+    }
+    
+}
+
+OUTPUT:
+Enter size of an array:
+5
+Enter Array Elements:
+10
+Enter Array Elements:
+20
+Enter Array Elements:
+30
+Enter Array Elements:
+40
+Enter Array Elements:
+50
+[10, 20, 30, 40, 50]
+
+
