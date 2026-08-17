@@ -1,0 +1,54 @@
+WAP to Convert Integer Array to String Array:
+package arrayconversion;
+
+import java.util.*;
+
+public class IntegerArrayToStringArray {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter size of array: ");
+        int size = sc.nextInt();
+
+        int[] numbers = new int[size];
+
+        // Taking integer array input
+        System.out.println("Enter array elements:");
+
+        for (int i = 0; i < size; i++) {
+            numbers[i] = sc.nextInt();
+        }
+
+        // Creating String array
+        String[] stringNumbers = new String[size];
+
+        // Converting int to String
+        for (int i = 0; i < size; i++) {
+            stringNumbers[i] = String.valueOf(numbers[i]);
+        }
+
+        // Displaying String array
+        System.out.println("String Array:");
+
+        for (int i = 0; i < size; i++) {
+            System.out.println(stringNumbers[i]);
+        }
+
+        sc.close();
+    }
+}
+
+OUTPUT:
+Enter size of array: 4
+Enter array elements:
+10
+20
+30
+40
+String Array:
+10
+20
+30
+40
