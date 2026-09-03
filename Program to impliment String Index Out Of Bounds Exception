@@ -1,0 +1,32 @@
+WAP to impliment String Index Out Of Bounds Exception
+package exception_out_of_bound;
+
+import java.util.*;
+public class Exception_out_of_bound {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+       String string = "Hello";
+       System.out.println("Enter Index");
+       int index=sc.nextInt();
+       
+       
+       try{
+           System.out.println(string.charAt(index));
+       }
+       catch(StringIndexOutOfBoundsException e) {
+           System.out.println("Invalid index! Please Enter valid index");
+       }
+    }
+    
+}
+
+OUTPUT 1:
+Enter Index
+1
+e
+
+OUTPUT 2:
+Enter Index
+10
+Invalid index! Please Enter valid index
