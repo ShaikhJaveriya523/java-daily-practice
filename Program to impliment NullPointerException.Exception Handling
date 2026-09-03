@@ -1,0 +1,21 @@
+WAP to Handle Null Pointer Exception:
+package exceptionnullpointer;
+
+public class ExceptionNullPointer {
+
+    public static void main(String[] args) {
+         String s=null;
+        
+        try{
+            s.length();
+        }
+        catch (NullPointerException e) {
+            System.out.println("String is null. Cannot perform the operation.");
+        }
+    
+    }
+    
+}
+
+OUTPUT:
+String is null. Cannot perform the operation.
