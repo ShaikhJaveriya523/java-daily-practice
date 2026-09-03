@@ -1,0 +1,39 @@
+
+WAP to convert string to integer and handle exception:
+package stringtointiger_exceptionhandling;
+
+
+import java.util.*;
+
+public class StringToIntiger_ExceptionHandling {
+
+    
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        
+        System.out.println("Enter String");
+        String string=sc.nextLine();
+        
+        try{
+            int number = Integer.parseInt(string);
+            System.out.println(number);
+        }
+        catch (NumberFormatException e) {
+            System.out.println("Invalid Input! Please Enter a numeric value");
+        }
+        sc.close();
+    }
+    
+}
+
+OUTPUT 1:
+Enter String
+abcd
+Invalid Input! Please Enter a numeric value
+
+
+OUTPUT 2:
+Enter String
+12345
+12345
+
