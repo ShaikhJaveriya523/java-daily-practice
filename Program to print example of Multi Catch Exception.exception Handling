@@ -1,0 +1,23 @@
+WAP to print example of Multi Catch Exception:
+
+public class Main{
+    public static void main(String[] args) {
+        try{
+            int a = 8;
+            int b = 42/a;
+        }
+       
+        catch (ArithmeticException e){
+            System.out.println("This is never reached");
+        }
+
+
+        catch (Exception e)
+        {
+            System.out.println("Generic Exception Catch");
+        }
+       
+   
+ 
+}
+}
