@@ -1,0 +1,27 @@
+WAP to Handle of Input Output Exception: 
+package exampleofinputoutputexception;
+
+import java.io.*;
+public class ExampleofInputOutputException {
+
+    
+    public static void main(String[] args) {
+        try {           
+            FileReader file = new FileReader("test.txt");
+            BufferedReader reader = new BufferedReader(file);
+        
+            String text  = reader.readLine();
+            System.out.println(text);
+        
+            reader.close();
+        }
+        catch(IOException e) {
+            System.out.println("An error occured while reading the file:");
+        }              
+    }  
+}
+
+
+OUTPUT:
+An error occured while reading the file:
+
