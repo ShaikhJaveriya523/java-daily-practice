@@ -1,0 +1,35 @@
+WAP to handle InputMismatchException:
+package mismatchinputexception;
+
+import java.util.*;
+public class MismatchInputException {
+
+    
+    public static void main(String[] args) {
+        Scanner  sc = new Scanner(System.in);
+        
+        try{
+            System.out.println("Enter a Integer Number:");
+            int Number = sc.nextInt();
+            System.out.println(Number);
+            
+        }
+        
+        catch(InputMismatchException e) {
+            System.out.println("Invalid Input! Please Enter Integer Number");
+        }
+        
+    }
+    
+}
+
+OUTPUT 1:
+Enter a Integer Number:
+55
+55
+
+OUTPUT 2:
+Enter a Integer Number:
+abcd
+Invalid Input! Please Enter Integer Number
+
