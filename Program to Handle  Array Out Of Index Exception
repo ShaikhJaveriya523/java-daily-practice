@@ -1,0 +1,42 @@
+WAP to Handle Array Out Of Index Exception:
+package arrayoutofindexexample;
+
+
+import java.util.*;
+
+public class ArrayoutofindexExample {
+
+    public static void main(String[] args) {
+      
+        int[] array = {10, 20, 30, 40, 50};
+        Scanner sc = new Scanner(System.in);
+        
+        
+        try {
+            System.out.println("Enter Index");
+           int index = sc.nextInt();
+           
+           System.out.println("Element: " + array[index]);
+        }
+        
+        catch(ArrayIndexOutOfBoundsException e) {
+            System.out.println("Invalid index! Please enter an index between 0 and 4.");
+        }
+    }
+    
+}
+
+
+OUTPUT 1:
+Enter Index
+3
+Element: 40
+
+
+OUTPUT 2:
+Enter Index
+8
+Invalid index! Please enter an index between 0 and 4.
+
+
+
