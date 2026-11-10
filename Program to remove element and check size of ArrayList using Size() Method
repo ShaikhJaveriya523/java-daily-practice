@@ -1,0 +1,42 @@
+
+package sizeofarraylist;
+
+Q : WAP to Check Size of ArrayList or Number of Elements in ArrayList:
+
+import java.util.*;
+public class SizeOfArrayList {
+
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
+        System.out.println(numbers);
+        System.out.println("Enter number to be remove");
+        int number = sc.nextInt();
+        if(numbers.contains(number)) {
+            numbers.remove(Integer.valueOf(number));
+            System.out.println(numbers);
+        }
+        else {
+            System.out.println("Name not found");
+        }
+        
+        System.out.println("Total size of numbers is " + numbers.size());
+        
+    }
+    
+}
+
+OUTPUT:
+[1, 2, 3, 4, 5]
+Enter number to be remove
+3
+[1, 2, 4, 5]
+Total size of numbers is 4
+
+
