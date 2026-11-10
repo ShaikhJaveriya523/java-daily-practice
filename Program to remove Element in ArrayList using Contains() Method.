@@ -1,0 +1,44 @@
+Q: WAP to remove Element in ArrayList using Contains() Method.
+
+package removeelementarraylsit;
+import java.util.*;
+public class RemoveElementArrayLsit {
+
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<String> names = new ArrayList<>();
+        names.add("javeriya");
+        names.add("zoya");
+        names.add("Saniya");
+        names.add("yasin");
+        names.add("Amina");
+        System.out.println(names);
+        System.out.println("Enter name to remove");
+        String name = sc.nextLine();
+        if(names.contains(name)) {
+            names.remove(name);
+            System.out.println(names);
+        }
+        else {
+            System.out.println("Name not found");
+        }
+
+    }
+    
+}
+OUTPUT:
+1.
+[javeriya, zoya, Saniya, yasin, Amina]
+Enter name to remove
+zoya
+[javeriya, Saniya, yasin, Amina]
+
+2.
+[javeriya, zoya, Saniya, yasin, Amina]
+Enter name to remove
+Shaikh
+Name not found
+
+
+
