@@ -1,0 +1,89 @@
+Q: WAP to Search Element in ArrayList:
+
+package serachelementarraylist;
+
+import java.util.*;
+public class SerachElementArrayList {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+       
+
+        ArrayList<String> names = new ArrayList<>();
+        for(int i=0; i<5; i++) {
+            System.out.println("Enter name");
+             String name = sc.nextLine();
+            System.out.println(names.add(name));
+            
+        }
+        for(int i=0; i<names.size(); i++) {
+            System.out.println(names.get(i));
+        }
+        System.out.println("Enter name to search");
+        String target = sc.nextLine();
+        if(names.contains(target)){
+            System.out.println("Name found");
+        }
+        else {
+            System.out.println("Name not found");
+        }
+    }
+    
+}
+
+OUTPUT:
+1.Name found
+
+Enter name
+Javeriya
+true
+Enter name
+Saniya
+true
+Enter name
+Shaikh
+true
+Enter name
+Yasin
+true
+Enter name
+Amina
+true
+Javeriya
+Saniya
+Shaikh
+Yasin
+Amina
+Enter name to search
+Shaikh
+Name found
+
+2.Name not found
+
+Enter name
+Javeriya
+true
+Enter name
+Saniya
+true
+Enter name
+Amina
+true
+Enter name
+Yasin
+true
+Enter name
+Shaikh
+true
+Javeriya
+Saniya
+Amina
+Yasin
+Shaikh
+Enter name to search
+Zoya
+Name not found
+
+
+
+
