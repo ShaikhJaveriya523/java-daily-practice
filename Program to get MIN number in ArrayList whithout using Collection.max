@@ -1,0 +1,30 @@
+Q: WAP to get MIN number in ArrayList whithout using Collection.max:
+
+
+package minnumberarraylist;
+import java.util.*;
+public class MinNumberArrayList {
+
+    
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(12);
+        numbers.add(45);
+        numbers.add(7);
+        numbers.add(89);
+        numbers.add(23);
+        
+        int min= 12;
+        for(int i=1; i<numbers.size(); i++) {
+            if(numbers.get(i) < min) {
+                min = numbers.get(i);
+            }
+        }
+        System.out.println("The Minimum number in the ArrayLsit is " + min);
+       
+    }
+    
+}
+
+OUTPUT:
+The Minimum number in the ArrayLsit is 7.
