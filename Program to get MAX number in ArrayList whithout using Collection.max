@@ -1,0 +1,32 @@
+Q: WAP to get MAX number in ArrayList whithout using Collection.max:
+
+package maxnumberarraylist;
+
+import java.util.*;
+public class MaxNumberArrayList {
+
+    
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(12);
+        numbers.add(45);
+        numbers.add(7);
+        numbers.add(89);
+        numbers.add(23);
+        
+        int max = 12;
+        for(int i=1; i<numbers.size(); i++) {
+            if(numbers.get(i) > max) {
+                max = numbers.get(i);
+            }
+        }
+        System.out.println("The Maximum number in the ArrayLsit is " + max);
+       
+
+    }
+    
+}
+
+OUTPUT:
+The Maximum number in the ArrayLsit is 89.
+
