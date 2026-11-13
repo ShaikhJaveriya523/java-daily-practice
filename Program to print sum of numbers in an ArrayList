@@ -1,0 +1,27 @@
+Q: WAP to print sum of numbers in an ArrayList.
+package sumofarraylist;
+
+import java.util.*;
+public class SumOfArrayList {
+
+    
+    public static void main(String[] args) {
+        ArrayList<Integer> Numbers = new ArrayList<>();
+        Numbers.add(10);
+        Numbers.add(20);
+        Numbers.add(30);
+        Numbers.add(40);
+        Numbers.add(50);
+        int sum=0;
+        for(int i=0; i< Numbers.size(); i++) {
+            sum = sum +Numbers.get(i);
+        }
+        System.out.println("Total Sum = " + sum);
+      
+       }
+       
+    }
+
+OUTPUT:
+Total Sum = 150
+    
