@@ -1,0 +1,85 @@
+Q: WAJP to write all Methods of LinkedList.
+package linkedlistmethods;
+
+import java.util.*;
+public class LinkedListMethods {
+
+    public static void main(String[] args) {
+        LinkedList<Integer> numbers = new LinkedList<>();
+        
+        //Add or insert element to linkedlist
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(30);
+        numbers.add(40);
+        numbers.add(50);
+        System.out.println(numbers);
+        
+        //add element to first 
+        numbers.addFirst(5);
+        System.out.println("After adding elemet at front LinkedList is = " + numbers);
+        
+         
+        //add element to last
+        numbers.addLast(100);
+        System.out.println("After adding elemet at last LinkedList is = " + numbers);
+        
+        //getting element from perticular index 
+        System.out.println("The element at index 2 is " + numbers.get(2));
+        
+        //getting first element of List
+        System.out.println("The first element in the list is " + numbers.getFirst());
+        
+        //getting last element of List
+        System.out.println("The last element in the list is " + numbers.getLast());
+        
+        //Updating element in the list
+        numbers.set(5,60);
+        System.out.println("After Updating the list = " + numbers);
+        
+        //removing element 
+        numbers.remove(Integer.valueOf(30));
+        System.out.println("After removing element from list = " + numbers);
+        
+        //removing first element of the list
+        numbers.removeFirst();
+        System.out.println("After removing first element from the list = " + numbers);
+        
+         //removing last element of the list
+        numbers.removeLast();
+        System.out.println("After removing last element from the list = " + numbers);
+        
+        //checking element exist or not using contains method
+        System.out.println("is list contains that element = " + numbers.contains(20));
+        System.out.println("is list contains that element = " + numbers.contains(80));
+        
+        //checking size of list
+        System.out.println("Total elements = " + numbers.size());
+        
+        //checking empty element in the list
+        System.out.println("Empty element exist = " + numbers.isEmpty());
+        
+        //removing all element in the list
+        numbers.clear();
+        System.out.println("After removing all element list become "  + numbers);
+    }
+    
+}
+
+OUTPUT:
+[10, 20, 30, 40, 50]
+After adding elemet at front LinkedList is = [5, 10, 20, 30, 40, 50]
+After adding elemet at last LinkedList is = [5, 10, 20, 30, 40, 50, 100]
+The element at index 2 is 20
+The first element in the list is 5
+The last element in the list is 100
+After Updating the list = [5, 10, 20, 30, 40, 60, 100]
+After removing element from list = [5, 10, 20, 40, 60, 100]
+After removing first element from the list = [10, 20, 40, 60, 100]
+After removing last element from the list = [10, 20, 40, 60]
+is list contains that element = true
+is list contains that element = false
+Total elements = 4
+Empty element exist = false
+After removing all element list become []
+
