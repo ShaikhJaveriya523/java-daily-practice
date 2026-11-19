@@ -1,0 +1,37 @@
+Q: WAJP to remove Duplicate element in a LinkedList:
+
+package removeduplicatelinkedlist;
+
+import java.util.*;
+public class RemoveDuplicateLinkedList {
+
+   
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        LinkedList<Integer> numbers = new LinkedList<>();
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(30);
+        numbers.add(20);
+        numbers.add(10);
+        numbers.add(40);
+        numbers.add(50);
+        System.out.println("Original list : "+ numbers);
+        
+        for(int i = 0; i < numbers.size(); i++) {
+            for(int j = i + 1; j < numbers.size(); j++) {
+                if(numbers.get(i) == numbers.get(j)) {
+                    numbers.remove(j);
+                    j--;
+                }
+            }
+        }
+        System.out.println("After removing duplicate element : " + numbers);
+        
+    }
+    
+}
+
+OUTPUT:
+Original list : [10, 20, 30, 20, 10, 40, 50]
+After removing duplicate element : [10, 20, 30, 40, 50]
