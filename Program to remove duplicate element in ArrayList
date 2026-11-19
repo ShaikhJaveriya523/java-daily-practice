@@ -1,0 +1,36 @@
+Q: WAJP to Remove Duplicate element in a ArrayList:
+package removeduplicatearraylist;
+
+import java.util.*;
+public class RemoveDuplicateArrayList {
+
+   
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(30);
+        numbers.add(40);
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(30);
+        numbers.add(50);
+        System.out.println("Original List : " + numbers);
+        
+        for(int i = 0; i < numbers.size(); i++) {
+            for(int j = i + 1; j < numbers.size(); j++) {
+                if(numbers.get(i) == numbers.get(j)) {
+                    numbers.remove(j);
+                    j--;
+                }
+            }
+        }
+        System.out.println("After removing Duplicate element:" + numbers);       
+    }
+    
+}
+
+OUTPUT:
+Original List : [10, 20, 30, 40, 10, 20, 30, 50]
+After removing Duplicate element:[10, 20, 30, 40, 50]
+
